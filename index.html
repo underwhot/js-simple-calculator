@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Calculator | JS</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230429162735">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+
+			<div class="calc">
+				<div class="calc__container">
+					<div class="calc__body">
+						<div class="calc__theme"></div>
+						<div class="calc__result">
+							<div class="calc__output">
+								<input autocomplete="off" type="text" class="input" value="0" readonly>
+							</div>
+							<!-- <div class="calc__input"></div> -->
+						</div>
+						<div class="calc__dial dial-calc">
+							<div class="dial-calc__row">
+								<div class="dial-calc__btn-wrapper big"><button data-clear type="button" class="dial-calc__button button button_big"><span>CA</span></button></div>
+								<div class="dial-calc__btn-wrapper"><button data-delete type="button" class="dial-calc__button button"><span>DEL</span></button></div>
+								<!-- <div class="dial-calc__btn-wrapper"><button data-calc-plusminus type="button" class="dial-calc__button button"><span>+/-</span></button></div> -->
+								<!-- <div class="dial-calc__btn-wrapper"><button data-calc-percent type="button" class="dial-calc__button button"><span>%</span></button></div> -->
+								<div class="dial-calc__btn-wrapper"><button data-act type="button" class="dial-calc__button button"><span>/</span></button></div>
+							</div>
+
+							<div class="dial-calc__row">
+								<div class="dial-calc__btn-wrapper"><button data-num type="button" class="dial-calc__button button"><span>7</span></button></div>
+								<div class="dial-calc__btn-wrapper"><button data-num type="button" class="dial-calc__button button"><span>8</span></button></div>
+								<div class="dial-calc__btn-wrapper"><button data-num type="button" class="dial-calc__button button"><span>9</span></button></div>
+								<div class="dial-calc__btn-wrapper"><button data-act type="button" class="dial-calc__button button"><span>*</span></button></div>
+							</div>
+
+							<div class="dial-calc__row">
+								<div class="dial-calc__btn-wrapper"><button data-num type="button" class="dial-calc__button button"><span>4</span></button></div>
+								<div class="dial-calc__btn-wrapper"><button data-num type="button" class="dial-calc__button button"><span>5</span></button></div>
+								<div class="dial-calc__btn-wrapper"><button data-num type="button" class="dial-calc__button button"><span>6</span></button></div>
+								<div class="dial-calc__btn-wrapper"><button data-act type="button" class="dial-calc__button button"><span>-</span></button></div>
+							</div>
+
+							<div class="dial-calc__row">
+								<div class="dial-calc__btn-wrapper"><button data-num type="button" class="dial-calc__button button"><span>1</span></button></div>
+								<div class="dial-calc__btn-wrapper"><button data-num type="button" class="dial-calc__button button"><span>2</span></button></div>
+								<div class="dial-calc__btn-wrapper"><button data-num type="button" class="dial-calc__button button"><span>3</span></button></div>
+								<div class="dial-calc__btn-wrapper"><button data-act data-plus type="button" class="dial-calc__button button"><span>+</span></button></div>
+							</div>
+
+							<div class="dial-calc__row">
+								<div class="dial-calc__btn-wrapper"><button data-dot type="button" class="dial-calc__button button"><span>.</span></button></div>
+								<div class="dial-calc__btn-wrapper"><button data-num type="button" class="dial-calc__button button"><span>0</span></button></div>
+								<div class="dial-calc__btn-wrapper big"><button data-equal type="button" class="dial-calc__button button button_equal button_big"><span>=</span></button></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+	</div>
+	<script src="js/app.min.js?_v=20230429162735"></script>
+</body>
+
+</html>

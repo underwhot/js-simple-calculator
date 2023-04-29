@@ -1,0 +1,341 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap);
+
+@charset "UTF-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #F4F2EC;
+  line-height: 1;
+  font-family: "Montserrat";
+  font-size: 0.875rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Montserrat";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  background-color: #000;
+}
+
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стилі будуть застосовуватись до
+всіх класів, що містять *__container
+Наприклад header__container, main__container і т.п.
+Сніппет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 49.8125rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*/
+
+.calc {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.calc__container {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+}
+
+.calc__body {
+  max-width: 25.625rem;
+  background-color: #333;
+  border-radius: 30px;
+  padding: 2.5rem 1.25rem 1.25rem;
+}
+
+.calc__result {
+  margin-bottom: 1.875rem;
+}
+
+.calc__output {
+  position: relative;
+  height: 4.375rem;
+  margin-bottom: 1.25rem;
+}
+
+.calc__output input {
+  color: inherit;
+  background-color: transparent;
+  width: 100%;
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: right;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.calc__input {
+  min-height: 1.25rem;
+  text-align: right;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.dial-calc__row {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -0.5rem;
+}
+
+.dial-calc__row:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.dial-calc__btn-wrapper {
+  padding: 0 0.5rem;
+}
+
+.dial-calc__btn-wrapper.big {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+
+.button {
+  padding: 2.5rem;
+  background-color: #333;
+  border-radius: 20px;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-shadow: -2px -2px 3px #555, 2px 2px 3px #222, 1px -1px 3px #555, -1px 1px 3px #555, inset 2px 2px 3px #555, inset -2px -2px 3px #222;
+          box-shadow: -2px -2px 3px #555, 2px 2px 3px #222, 1px -1px 3px #555, -1px 1px 3px #555, inset 2px 2px 3px #555, inset -2px -2px 3px #222;
+}
+
+.button span {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.375rem;
+}
+
+.button:active {
+  background-color: #303030;
+  -webkit-box-shadow: 2px 2px 3px #555, -2px -2px 3px #222, -1px 1px 3px #555, 1px -1px 3px #555, inset -2px -2px 3px #555, inset 2px 2px 3px #222;
+          box-shadow: 2px 2px 3px #555, -2px -2px 3px #222, -1px 1px 3px #555, 1px -1px 3px #555, inset -2px -2px 3px #555, inset 2px 2px 3px #222;
+}
+
+.button_equal {
+  background-color: #444;
+}
+
+.button_equal:active {
+  background-color: #3f3f3f;
+}
+
+.button_big {
+  width: 100%;
+}
+
+@media (max-width: 29.99875em) {
+  .calc__body {
+    max-width: 20.5rem;
+  }
+
+  .button {
+    padding: 1.875rem;
+  }
+}
+
+@media (any-hover: hover) {
+  .button {
+    -webkit-transition: all 0.1s ease 0s;
+    -o-transition: all 0.1s ease 0s;
+    transition: all 0.1s ease 0s;
+  }
+}
